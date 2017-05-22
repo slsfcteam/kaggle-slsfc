@@ -147,3 +147,13 @@ cd /etc/jupyterhub
 sudo -u jupyterhub jupyterhub --JupyterHub.spawner_class=sudospawner.SudoSpawner
 sudo -u jupyterhub /opt/.pyenv/shims/jupyterhub --JupyterHub.spawner_class=sudospawner.SudoSpawner
 ```
+
+### kernelの追加
+
+初期状態ではjupyterhubを起動しているPythonしか利用できないため、kernelを追加する
+
+```shell
+ipython kernel install --name enviroment --user
+```
+
+enviromentには追加したいpyenvの環境名が入る
